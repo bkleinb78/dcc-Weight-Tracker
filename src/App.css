@@ -1,0 +1,16 @@
+.border-box {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 1em;
+    padding: 1em;
+}
+
+.center-text{
+    text-align: center;
+}
+
+h1 {
+    background-color: lightgray;
+    
+}

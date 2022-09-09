@@ -6,11 +6,11 @@ const EntriesChartTracker = (props) => {
     const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
-        let tempChartData = props.parentEntries.map(entry => {
+        let tempChartData = props.entries.map(entry => {
             return [entry.date, entry.weight];
         });
         setChartData(tempChartData);
-    }, [props.parentEntries])
+    }, [props.entries])
 
     
     return (
@@ -19,6 +19,7 @@ const EntriesChartTracker = (props) => {
         data={[["Date", "Weight"], ...chartData]} 
         width="100%"
         height="400px"
+        options={{legend: {position: 'bottom'}}}
         legendToggle
         />
     );
